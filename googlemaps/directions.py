@@ -58,14 +58,6 @@ def directions(client, origin, destination,
     :param language: The language in which to return results.
     :type language: string
 
-    :param units: Specifies the unit system to use when displaying results.
-        "metric" or "imperial"
-    :type units: string
-
-    :param region: The region code, specified as a ccTLD ("top-level domain"
-        two-character value.
-    :type region: string
-
     :param departure_time: Specifies the desired time of departure.
     :type departure_time: int or datetime.datetime
 
@@ -80,13 +72,9 @@ def directions(client, origin, destination,
 
     :param transit_mode: Specifies one or more preferred modes of transit.
         This parameter may only be specified for requests where the mode is
-        transit. Valid values are "bus", "subway", "train", "tram", "rail".
+        transit. Valid values are "bus", "walk", "car", "rail"
         "rail" is equivalent to ["train", "tram", "subway"].
     :type transit_mode: string or list of strings
-
-    :param transit_routing_preference: Specifies preferences for transit
-        requests. Valid values are "less_walking" or "fewer_transfers"
-    :type transit_routing_preference: string
 
     :param traffic_model: Specifies the predictive travel time model to use.
         Valid values are "best_guess" or "optimistic" or "pessimistic".
